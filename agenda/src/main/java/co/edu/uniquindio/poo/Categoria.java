@@ -1,5 +1,10 @@
 package co.edu.uniquindio.poo;
 
-public class Categoria {
+public enum Categoria {
+
+    OFICINA,
+    FIESTA,
+    AMIGOS,
+    FAMILIA;
 
 }
