@@ -8,6 +8,14 @@ public class Contacto {
     private String telefono;
     private String email;
 
+    /**
+     * constructor de la clase Contacto
+     * @param nombre
+     * @param alias
+     * @param direccion
+     * @param telefono
+     * @param email
+     */
     public Contacto(String nombre, String alias, String direccion, String telefono, String email) {
         this.nombre = nombre;
         this.alias = alias;
@@ -16,6 +24,9 @@ public class Contacto {
         this.email = email;
     }
 
+    /**
+     * getters y setters
+     */
     public String getNombre() {
         return nombre;
     }

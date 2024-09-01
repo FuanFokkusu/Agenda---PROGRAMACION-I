@@ -10,6 +10,12 @@ public class Reunion {
     private String hora;
     private Collection<Contacto> asistentes;
 
+    /**
+     * constructor de la clase Reunion
+     * @param descripcion
+     * @param fecha
+     * @param hora
+     */
     public Reunion(String descripcion, String fecha, String hora) {
         this.descripcion = descripcion;
         this.fecha = fecha;
@@ -18,6 +24,11 @@ public class Reunion {
 
     }
 
+    /**
+     * metodo que verifica si un contacto ya esta registrado como asistente en la lista de asistentes
+     * @param nuevoAsistente
+     * @return
+     */
     public boolean verificarAsistenteExistente(Contacto nuevoAsistente) {
         for (Contacto asistente : asistentes) {
             if (asistente.getAlias().equals(nuevoAsistente.getAlias()) &&
@@ -28,6 +39,10 @@ public class Reunion {
         return false; // El contacto no existe
     }
 
+    /**
+     * metodo que agrega un nuevo asistente a la lista de asistentes de la reunion si no esta ya registrado
+     * @param nuevoAsistente
+     */
     public void agregarAsistente(Contacto nuevoAsistente) {
         if (!verificarAsistenteExistente(nuevoAsistente)) {
             asistentes.add(nuevoAsistente);
@@ -37,6 +52,9 @@ public class Reunion {
         }
     }
 
+    /**
+     * getters y setters
+     */
     public String getDescripcion() {
         return descripcion;
     }
